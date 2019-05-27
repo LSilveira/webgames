@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.springframework.org/schema/mvc">
+<head>
+    <meta charset="UTF-8">
+    <title>Hangman</title>
+
+    <script th:src="@{/webjars/jquery/3.4.1/jquery.min.js}" ></script>
+    <script th:src="@{../js/game.js}" ></script>
+</head>
+<body>
+    <h1>Hangman</h1>
+    <table id="hangmangTable">
+        <tbody>
+            <tr>
+                <td>Guessing word: </td>
+                <td><span th:text="${word}"></span></td>
+            </tr>
+            <tr>
+                <td>Game state: </td>
+                <td><span id="state" th:text="${state}"></span></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Guess: </td>
+                <td>
+                    <input type="text" id="guessWord" name="guessWord" th:value="${guessWord}" />
+                    <input type="hidden" id="playerName" name="playerName" th:value="${playerName}" />
+                </td>
+            </tr>
+            <tr>
+                <td>Guesses: </td>
+                <td><span id="totalGuesses" th:text="${totalGuesses}"></span></td>
+            </tr>
+        </tbody>
+    </table>
+    <input type="button" id="submitGuess" value="Guess" >
+</body>
+</html>

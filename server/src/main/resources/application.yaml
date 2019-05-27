@@ -1,0 +1,17 @@
+server:
+  port: 9000
+
+games:
+  hangman:
+      words:
+        - Hangman
+        - Water Melon
+        - Garden
+        - Space ship
+        - Waterfall
+
+logging:
+  level:
+    org:
+      apache:
+        http: DEBUG

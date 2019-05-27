@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Games</title>
+
+    <script th:src="@{/webjars/jquery/3.4.1/jquery.min.js}" ></script>
+    <script th:src="@{../js/game.js}" ></script>
+</head>
+<body>
+    <h1>Hangman</h1>
+    <form id="gameForm" th:action="@{/game/hangman}" method="get" >
+        <span><input type="text" name="playerName" /></span>
+        <h4><a href="javascript:void(0)" id="newGame" >New game</a></h4>
+    </form>
+</body>
+</html>
